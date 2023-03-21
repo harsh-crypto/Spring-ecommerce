@@ -5,47 +5,42 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.3</version>
+		<version>3.0.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.shopme.WebParent</groupId>
 	<artifactId>ShopmeWebParent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
 	<name>ShopmeWebParent</name>
-	<description>Web parent project for shopme</description>
+	<packaging>pom</packaging>
+	<description>Web parent module for web application</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
+	<modules>
+	<module>ShopmeBackEnd</module>
+	<module>ShopmeFrontEnd</module>
+	</modules>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web-reactive -->
+		<!--  <dependency>-->
+		<!--	<groupId>org.springframework.boot</groupId>-->
+		<!--	<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>sprint-boot-starter-test</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>4.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>webjars-locator-core</artifactId>
-		</dependency>
 	</dependencies>
-	<modules>
-	<module>ShopmeBackendProject</module>
-	<module>ShopmeFrontEndProject</module>
-	</modules>
 
 	<build>
 		<plugins>
