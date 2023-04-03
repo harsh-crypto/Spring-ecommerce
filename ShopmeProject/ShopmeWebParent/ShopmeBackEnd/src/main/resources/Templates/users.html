@@ -34,11 +34,38 @@
 			</div>
 		</nav>
 	<div>
-	<h1>Shopme Control Page</h1>
+	<h1>Manage Users</h1>
 	</div>
+	
 	<div>
-	<p>copyright blah bblah</p>
+		<table class="table table-bordered table-striped table-hover table-responsive">
+		<thead class="thead-dark">
+			<tr>
+				<th>User Id</th>
+				<th>Name</th>
+				<th>Photo</th>
+				<th>Email</th>
+				<th>Roles</th>
+				<th>Active</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr th:each="user : ${listusers}">
+			<td>[[${user.id}]]</td>
+			<td>[[${user.firstName}+${user.lastName}]]</td>
+			<td>[[${user.photo}]]</td>
+			<td>[[${user.email}]]</td>
+			<td>[[${user.roles}]]</td>
+			<td>[[${user.enabled}]]</td>
+			<td> <button &nbsp>Edit</button><button &nbsp >delete</button></td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
-</div>
+	</div>
+	<div class="center">
+	<p>copyright 2023</p>
+	</div>
+
 </body>
 </html>
